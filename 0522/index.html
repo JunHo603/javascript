@@ -11,23 +11,41 @@
       <p>이것은 p태그 요소입니다.</p>
     </div>
     <script>
-      var currentYear = 2024;
-      var birthYear;
-      var age;
-
-      let x = 10;
+      var x = 10;
       console.log(x);
-      x = 100;
+      var x = 100; // var는 이중선언 허용
       console.log(x);
-      const y = 10;
-      y = 100;
+      y = 1000; // 변수의 호이스팅(hoisting)
+      console.log(y);
 
-      //   birthYear = prompt("태어난 연도를 입력하세요. (YYYY)", "");
-      //   age = currentYear - birthYear + 1;
-      //   document.write(currentYear + "년 현재<br>");
-      //   document.write(
-      //     birthYear + "년에 태어난 사람의 나이는" + age + "세 입니다."
-      //   );
+      let a = 1;
+      //let a = 2; let과 const는 더이상 이중선언을 허용하지 않음
+      b = 2;
+      console.log(b);
+
+      function displayNumber() {
+        console.log(z);
+        let z = 5;
+        if (z >= 10) {
+          let w;
+          console.log("z는 두자리 숫자");
+        }
+      }
+
+      /*
+        let, const 정리
+        1. 호이스팅 된 변수의 선언에는 사용할 수 없음.
+           이유는 let과 const가 블록스코프(제안된 스코프)를 가지므로 호이스팅된
+           최상위스코프를 가질 수 없기때문
+        2. 재선언 안됨
+            let v1 = 10;
+            let v1 = 100; <- 재선언 에러
+        3. 재할당은 let은 가능, const는 불가능
+            vet v2 = 1;
+            v2 = 2; //재할당 가능
+            const v3 = 1;
+            v3 = 2; 에러. 재할당 불가능
+      */
     </script>
   </body>
 </html>
