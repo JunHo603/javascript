@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /* display: flex;
+  justify-items: center;
+  align-items: center; */
+}
+
+.container {
+  /* 가운데 공식 */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 1200px;
+  height: 500px;
+  margin: 200px auto;
+  border: 1px solid black;
+  /* display: flex;
+  justify-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.container :hover {
+  background-color: rgb(93, 155, 209);
+  transition: 0.5s;
+}
+
+.namecard {
+  width: 250px;
+  height: 150px;
+  margin: 0 20px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.c1 {
+  background-color: lightgreen;
+}
+.c2 {
+  background-color: teal;
+}
+.c3 {
+  background-color: lightgray;
+}
+.c4 {
+  background-color: khaki;
+}
+
+.heading {
+  color: dodgerblue;
+  margin-bottom: 30px;
+}
