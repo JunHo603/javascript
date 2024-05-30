@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="runAdd()">Add</button>
+    <p class="result"></p>
+
+    <script>
+      //   let counter = 0;
+      //   // 카운터는 정상 동작하지만 전역변수를 사용하므로 의도치않은
+      //   // 값의 변경 가능성이 있음 == 카운터딜레마
+      //   function add() {
+      //     counter = counter + 1;
+      //     document.querySelector(".result").textContent = counter;
+      //   }
+
+      //     // 전역변수를 사용하지 않아서 외부에서 변경가능성은 없으나
+      //     // 카운터 기능은 불가
+      //   function add() {
+      //     let counter = 0;
+      //     counter = counter + 1;
+      //     document.querySelector(".result").textContent = counter;
+      //   }
+      //   function add() {
+      //     let counter = 0;
+      //     counter += 1;
+      //     return counter;
+      //   }
+      //   function runAdd() {
+      //     document.querySelector(".result").textContent = add();
+      //   }
+
+      const add = (function () {
+        let counter = 0;
+        return function () {
+          counter += 1;
+          return counter;
+        };
+      })();
+      function runAdd() {
+        document.querySelector(".result").textContent = add();
+      }
+    </script>
+  </body>
+</html>
